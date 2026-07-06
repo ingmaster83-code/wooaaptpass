@@ -1,0 +1,192 @@
+﻿{% extends "base.html" %}
+
+{% block title %}{{ year }}년 청약 캘린더 — 월별 일정 | aptpass{% endblock %}
+{% block description %}{{ year }}년 전국 아파트 청약 월별 캘린더. 특별공급, 1순위, 당첨 발표 일정을 한눈에 확인하세요.{% endblock %}
+{% block og_title %}청약 캘린더 {{ year }} | aptpass{% endblock %}
+{% block og_desc %}전국 아파트 청약 일정 캘린더 — 특별공급·1순위·당첨 발표{% endblock %}
+{% block canonical %}https://wooaaptpass.wooahouse.com/calendar.html{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top:24px;">
+
+  <div class="section-title" style="margin-bottom:8px;">📅 청약 캘린더</div>
+  <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">{{ today_str }} 기준. 계약 종료일까지 진행 중인 단지만 표시됩니다.</p>
+
+  <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
+
+  <!-- 월 선택 -->
+  <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;" id="month-btns"></div>
+
+  <!-- 캘린더 본체 -->
+  <div class="cal-mini" id="main-cal">
+    <div class="cal-mini-header">
+      <span id="cal-title" style="font-size:1rem;"></span>
+    </div>
+    <div class="cal-grid" id="cal-grid"></div>
+  </div>
+
+  <div style="display:flex; gap:20px; margin-top:12px; flex-wrap:wrap; font-size:.82rem; color:var(--text-secondary);">
+    <span><i class="dot dot-blue" style="display:inline-block; vertical-align:middle;"></i> 특별공급</span>
+    <span><i class="dot dot-green" style="display:inline-block; vertical-align:middle;"></i> 1순위 청약</span>
+    <span><i class="dot dot-orange" style="display:inline-block; vertical-align:middle;"></i> 당첨 발표</span>
+    <span><i class="dot" style="background:var(--danger); display:inline-block; vertical-align:middle;"></i> 계약</span>
+  </div>
+
+  <!-- 이벤트 상세 -->
+  <div id="day-events" style="margin-top:24px; display:none;">
+    <div class="detail-card">
+      <div class="detail-card-title" id="day-title"></div>
+      <div id="day-list"></div>
+    </div>
+  </div>
+
+  <!-- 전체 일정 목록 -->
+  <div style="margin-top:32px;">
+    <div class="section-title" style="margin-bottom:16px;">📋 전체 일정 목록</div>
+    <div style="overflow-x:auto;">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>단지명</th>
+            <th>지역</th>
+            <th>특별공급</th>
+            <th>1순위 (해당)</th>
+            <th>당첨 발표</th>
+            <th>계약</th>
+            <th class="num">D-Day</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          {% set dd = item._dday %}
+          <tr>
+            <td>
+              <a href="/apt/{{ item.HOUSE_NM | slugify }}.html" style="color:var(--text-primary); font-weight:600; text-decoration:none;">
+                {{ item.HOUSE_NM }}
+              </a>
+            </td>
+            <td>{{ item.SUBSCRPT_AREA_CODE_NM }}</td>
+            <td style="font-size:.82rem;">{{ item.SPSPLY_RCEPT_BGNDE or '-' }}</td>
+            <td style="font-size:.82rem;">{{ item.GNRL_RNK1_CRSPAREA_RCPTDE or '-' }}</td>
+            <td style="font-size:.82rem;">{{ item.PRZWNER_PRESNATN_DE or '-' }}</td>
+            <td style="font-size:.82rem;">{{ item.CNTRCT_CNCLS_BGNDE or '-' }}</td>
+            <td class="num"><span class="badge badge-{{ dd.cls }}" style="font-size:.75rem;">{{ dd.label }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
+
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function () {
+  var events = {{ cal_events | safe }};
+  /* cal_events 구조: { "YYYY-MM-DD": [{name, slug, type}], ... } */
+
+  var today = new Date();
+  var curYear  = today.getFullYear();
+  var curMonth = today.getMonth();
+
+  /* 월 버튼 (±2개월) */
+  var btnWrap = document.getElementById('month-btns');
+  var KR_MON = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+  var months = [];
+  for (var i = -1; i <= 4; i++) {
+    var d = new Date(curYear, curMonth + i, 1);
+    months.push({ y: d.getFullYear(), m: d.getMonth() });
+  }
+  months.forEach(function (mo, idx) {
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn' + (idx === 1 ? ' filter-active' : '');
+    btn.textContent = mo.y + '년 ' + KR_MON[mo.m];
+    btn.onclick = function () {
+      document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('filter-active'); });
+      btn.classList.add('filter-active');
+      renderCal(mo.y, mo.m);
+    };
+    btnWrap.appendChild(btn);
+  });
+
+  function renderCal(y, m) {
+    var title  = document.getElementById('cal-title');
+    var grid   = document.getElementById('cal-grid');
+    var dayEvs = document.getElementById('day-events');
+    title.textContent = y + '년 ' + KR_MON[m];
+    grid.innerHTML = '';
+    dayEvs.style.display = 'none';
+
+    var days = ['일','월','화','수','목','금','토'];
+    days.forEach(function (d) {
+      var el = document.createElement('div');
+      el.className = 'cal-day-header';
+      el.textContent = d;
+      grid.appendChild(el);
+    });
+
+    var first = new Date(y, m, 1).getDay();
+    var total = new Date(y, m + 1, 0).getDate();
+
+    for (var i = 0; i < first; i++) {
+      var e = document.createElement('div');
+      e.className = 'cal-day other-month';
+      grid.appendChild(e);
+    }
+
+    for (var d2 = 1; d2 <= total; d2++) {
+      (function (day) {
+        var dateKey = y + '-' + String(m + 1).padStart(2,'0') + '-' + String(day).padStart(2,'0');
+        var cell = document.createElement('div');
+        var isToday = (y === today.getFullYear() && m === today.getMonth() && day === today.getDate());
+        cell.className = 'cal-day' + (isToday ? ' today' : '');
+        cell.style.cursor = events[dateKey] ? 'pointer' : 'default';
+        cell.textContent = day;
+
+        var ev = events[dateKey];
+        if (ev) {
+          var dotWrap = document.createElement('div');
+          dotWrap.className = 'cal-dot';
+          var seen = {};
+          ev.forEach(function (e2) {
+            if (!seen[e2.type]) {
+              var dot = document.createElement('i');
+              dot.className = 'dot dot-' + e2.type;
+              dotWrap.appendChild(dot);
+              seen[e2.type] = 1;
+            }
+          });
+          cell.appendChild(dotWrap);
+          cell.onclick = function () { showDay(dateKey, ev); };
+        }
+        grid.appendChild(cell);
+      })(d2);
+    }
+  }
+
+  function showDay(dateKey, ev) {
+    var panel = document.getElementById('day-events');
+    var title = document.getElementById('day-title');
+    var list  = document.getElementById('day-list');
+    title.textContent = dateKey.replace(/-/g, '. ') + ' 일정';
+    list.innerHTML = '';
+    var TYPE_LABELS = { blue: '특별공급', green: '1순위 청약', orange: '당첨 발표', red: '계약' };
+    ev.forEach(function (e) {
+      var row = document.createElement('div');
+      row.style.cssText = 'display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid var(--border); font-size:.9rem;';
+      row.innerHTML = '<a href="/apt/' + e.slug + '.html" style="color:var(--primary); font-weight:600;">' + e.name + '</a>'
+                    + '<span class="badge badge-' + e.type + '" style="font-size:.75rem;">' + (TYPE_LABELS[e.type] || e.type) + '</span>';
+      list.appendChild(row);
+    });
+    panel.style.display = '';
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  renderCal(curYear, curMonth);
+})();
+</script>
+{% endblock %}

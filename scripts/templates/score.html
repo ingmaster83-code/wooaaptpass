@@ -1,0 +1,158 @@
+﻿{% extends "base.html" %}
+
+{% block title %}당첨가점 커트라인 {{ year }} — 지역별 분석 | aptpass{% endblock %}
+{% block description %}{{ year }}년 아파트 청약 당첨가점 커트라인 지역별 분석. 내 점수로 당첨 가능한 지역과 단지를 확인하세요.{% endblock %}
+{% block og_title %}당첨가점 커트라인 분석 | aptpass{% endblock %}
+{% block og_desc %}지역별 청약 당첨가점 최저·평균·최고 통계 — aptpass{% endblock %}
+{% block canonical %}https://wooaaptpass.wooahouse.com/score.html{% endblock %}
+
+{% block content %}
+<div class="container" style="padding-top:24px;">
+
+  <div class="section-title" style="margin-bottom:8px;">📊 당첨가점 분석</div>
+  <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">지역별 1순위 청약 당첨가점 통계 (최근 데이터 기준). 내 점수를 입력해 당첨 가능 지역을 확인하세요.</p>
+
+  <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
+
+  <!-- 내 가점 계산기 -->
+  <div class="detail-card" style="margin-bottom:24px;">
+    <div class="detail-card-title">🧮 내 가점 확인</div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; margin-bottom:16px;">
+      <div>
+        <div style="font-size:.82rem; color:var(--text-muted); margin-bottom:6px;">무주택 기간 (최대 32점)</div>
+        <select id="score-nohome" style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px; font-size:.9rem;">
+          <option value="0">미해당 (0점)</option>
+          <option value="2">1년 미만 (2점)</option>
+          <option value="4">1년~2년 (4점)</option>
+          <option value="6">2년~3년 (6점)</option>
+          <option value="8">3년~4년 (8점)</option>
+          <option value="10">4년~5년 (10점)</option>
+          <option value="12">5년~6년 (12점)</option>
+          <option value="14">6년~7년 (14점)</option>
+          <option value="16">7년~8년 (16점)</option>
+          <option value="18">8년~9년 (18점)</option>
+          <option value="20">9년~10년 (20점)</option>
+          <option value="22">10년~11년 (22점)</option>
+          <option value="24">11년~12년 (24점)</option>
+          <option value="26">12년~13년 (26점)</option>
+          <option value="28">13년~14년 (28점)</option>
+          <option value="30">14년~15년 (30점)</option>
+          <option value="32">15년 이상 (32점)</option>
+        </select>
+      </div>
+      <div>
+        <div style="font-size:.82rem; color:var(--text-muted); margin-bottom:6px;">부양가족 수 (최대 35점)</div>
+        <select id="score-family" style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px; font-size:.9rem;">
+          <option value="5">0명 (5점)</option>
+          <option value="10">1명 (10점)</option>
+          <option value="15">2명 (15점)</option>
+          <option value="20">3명 (20점)</option>
+          <option value="25">4명 (25점)</option>
+          <option value="30">5명 (30점)</option>
+          <option value="35">6명 이상 (35점)</option>
+        </select>
+      </div>
+      <div>
+        <div style="font-size:.82rem; color:var(--text-muted); margin-bottom:6px;">청약통장 가입기간 (최대 17점)</div>
+        <select id="score-bank" style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px; font-size:.9rem;">
+          <option value="1">6개월 미만 (1점)</option>
+          <option value="2">6개월~1년 (2점)</option>
+          <option value="3">1년~2년 (3점)</option>
+          <option value="4">2년~3년 (4점)</option>
+          <option value="5">3년~4년 (5점)</option>
+          <option value="6">4년~5년 (6점)</option>
+          <option value="7">5년~6년 (7점)</option>
+          <option value="8">6년~7년 (8점)</option>
+          <option value="9">7년~8년 (9점)</option>
+          <option value="10">8년~9년 (10점)</option>
+          <option value="11">9년~10년 (11점)</option>
+          <option value="12">10년~11년 (12점)</option>
+          <option value="13">11년~12년 (13점)</option>
+          <option value="14">12년~13년 (14점)</option>
+          <option value="15">13년~14년 (15점)</option>
+          <option value="16">14년~15년 (16점)</option>
+          <option value="17">15년 이상 (17점)</option>
+        </select>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+      <div style="font-size:1.4rem; font-weight:700; color:var(--primary);">
+        내 가점: <span id="my-score">-</span>점
+      </div>
+      <button onclick="calcScore()" style="padding:10px 20px; background:var(--primary); color:#fff; border-radius:8px; font-weight:600; font-size:.9rem; cursor:pointer;">
+        계산하기
+      </button>
+    </div>
+  </div>
+
+  <!-- 지역 필터 -->
+  <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+    {% set regions = ['서울','경기','인천','부산','대구','광주','대전','울산','세종','강원','충북','충남','전북','전남','경북','경남','제주'] %}
+    <button class="filter-btn filter-active" onclick="filterScore(this,'all')">전체</button>
+    {% for r in regions %}
+    <button class="filter-btn" onclick="filterScore(this,'{{ r }}')">{{ r }}</button>
+    {% endfor %}
+  </div>
+
+  <!-- 가점 통계 테이블 -->
+  <div style="overflow-x:auto;">
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>지역</th>
+          <th>거주 구분</th>
+          <th>통계 기준월</th>
+          <th class="num">최저 가점</th>
+          <th class="num">중간 가점</th>
+          <th class="num">평균 가점</th>
+          <th class="num">최고 가점</th>
+        </tr>
+      </thead>
+      <tbody id="score-tbody">
+        {% for row in stat_rows %}
+        <tr class="score-row" data-region="{{ row.SUBSCRPT_AREA_CODE_NM }}">
+          <td>{{ row.SUBSCRPT_AREA_CODE_NM }}</td>
+          <td>{{ row.RESIDE_SECD_NM }}</td>
+          <td>{{ row.STAT_DE[:4] }}.{{ row.STAT_DE[4:6] }}</td>
+          <td class="num" style="color:var(--success); font-weight:600;">{{ row.LWET_SCORE }}</td>
+          <td class="num">{{ row.MED_SCORE }}</td>
+          <td class="num">{{ row.AVRG_SCORE }}</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">{{ row.TOP_SCORE }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:.78rem; color:var(--text-muted); margin-top:12px;">※ 당첨가점 통계는 과거 청약 결과를 기반으로 합니다. 실제 당첨가점은 청약 시기와 경쟁률에 따라 다를 수 있습니다.</p>
+
+  <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
+
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+function calcScore() {
+  var nohome = parseInt(document.getElementById('score-nohome').value, 10);
+  var family = parseInt(document.getElementById('score-family').value, 10);
+  var bank   = parseInt(document.getElementById('score-bank').value, 10);
+  var total  = nohome + family + bank;
+  document.getElementById('my-score').textContent = total;
+
+  /* 내 점수 이상의 최저가점 행 하이라이트 */
+  document.querySelectorAll('.score-row').forEach(function (tr) {
+    var lwet = parseInt(tr.cells[3].textContent, 10);
+    tr.style.background = (total >= lwet) ? 'var(--primary-light)' : '';
+  });
+}
+
+function filterScore(btn, region) {
+  document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('filter-active'); });
+  btn.classList.add('filter-active');
+  document.querySelectorAll('.score-row').forEach(function (tr) {
+    tr.style.display = (region === 'all' || tr.dataset.region === region) ? '' : 'none';
+  });
+}
+</script>
+{% endblock %}

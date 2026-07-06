@@ -1,0 +1,3237 @@
+﻿﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당첨가점 커트라인 2026 — 지역별 분석 | aptpass</title>
+  <meta name="description" content="2026년 아파트 청약 당첨가점 커트라인 지역별 분석. 내 점수로 당첨 가능한 지역과 단지를 확인하세요.">
+  <meta property="og:title" content="당첨가점 커트라인 분석 | aptpass">
+  <meta property="og:description" content="지역별 청약 당첨가점 최저·평균·최고 통계 — aptpass">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="aptpass">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wooaaptpass.wooahouse.com/score.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- 검색엔진 인증 -->
+  <meta name="naver-site-verification" content="6c6dda1cd2bc92df9969e9f29b3970fa857bb7d8">
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-6464921081676309">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-12ZGPE28JM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-12ZGPE28JM');
+  </script>
+</head>
+<body >
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">apt<span>pass</span></a>
+      <nav class="nav-links">
+        <a href="/list.html">청약목록</a>
+        <a href="/calendar.html">캘린더</a>
+        <a href="/residual.html">무순위</a>
+        <a href="/score.html">당첨가점</a>
+      </nav>
+      <div class="header-search">
+        <input type="search" id="header-search" placeholder="단지명, 지역 검색" autocomplete="off">
+        <button type="button" aria-label="검색">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+<div class="container" style="padding-top:24px;">
+
+  <div class="section-title" style="margin-bottom:8px;">📊 당첨가점 분석</div>
+  <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">지역별 1순위 청약 당첨가점 통계 (최근 데이터 기준). 내 점수를 입력해 당첨 가능 지역을 확인하세요.</p>
+
+  <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
+
+  <!-- 내 가점 계산기 -->
+  <div class="detail-card" style="margin-bottom:24px;">
+    <div class="detail-card-title">🧮 내 가점 확인</div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; margin-bottom:16px;">
+      <div>
+        <div style="font-size:.82rem; color:var(--text-muted); margin-bottom:6px;">무주택 기간 (최대 32점)</div>
+        <select id="score-nohome" style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px; font-size:.9rem;">
+          <option value="0">미해당 (0점)</option>
+          <option value="2">1년 미만 (2점)</option>
+          <option value="4">1년~2년 (4점)</option>
+          <option value="6">2년~3년 (6점)</option>
+          <option value="8">3년~4년 (8점)</option>
+          <option value="10">4년~5년 (10점)</option>
+          <option value="12">5년~6년 (12점)</option>
+          <option value="14">6년~7년 (14점)</option>
+          <option value="16">7년~8년 (16점)</option>
+          <option value="18">8년~9년 (18점)</option>
+          <option value="20">9년~10년 (20점)</option>
+          <option value="22">10년~11년 (22점)</option>
+          <option value="24">11년~12년 (24점)</option>
+          <option value="26">12년~13년 (26점)</option>
+          <option value="28">13년~14년 (28점)</option>
+          <option value="30">14년~15년 (30점)</option>
+          <option value="32">15년 이상 (32점)</option>
+        </select>
+      </div>
+      <div>
+        <div style="font-size:.82rem; color:var(--text-muted); margin-bottom:6px;">부양가족 수 (최대 35점)</div>
+        <select id="score-family" style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px; font-size:.9rem;">
+          <option value="5">0명 (5점)</option>
+          <option value="10">1명 (10점)</option>
+          <option value="15">2명 (15점)</option>
+          <option value="20">3명 (20점)</option>
+          <option value="25">4명 (25점)</option>
+          <option value="30">5명 (30점)</option>
+          <option value="35">6명 이상 (35점)</option>
+        </select>
+      </div>
+      <div>
+        <div style="font-size:.82rem; color:var(--text-muted); margin-bottom:6px;">청약통장 가입기간 (최대 17점)</div>
+        <select id="score-bank" style="width:100%; padding:8px; border:1px solid var(--border); border-radius:6px; font-size:.9rem;">
+          <option value="1">6개월 미만 (1점)</option>
+          <option value="2">6개월~1년 (2점)</option>
+          <option value="3">1년~2년 (3점)</option>
+          <option value="4">2년~3년 (4점)</option>
+          <option value="5">3년~4년 (5점)</option>
+          <option value="6">4년~5년 (6점)</option>
+          <option value="7">5년~6년 (7점)</option>
+          <option value="8">6년~7년 (8점)</option>
+          <option value="9">7년~8년 (9점)</option>
+          <option value="10">8년~9년 (10점)</option>
+          <option value="11">9년~10년 (11점)</option>
+          <option value="12">10년~11년 (12점)</option>
+          <option value="13">11년~12년 (13점)</option>
+          <option value="14">12년~13년 (14점)</option>
+          <option value="15">13년~14년 (15점)</option>
+          <option value="16">14년~15년 (16점)</option>
+          <option value="17">15년 이상 (17점)</option>
+        </select>
+      </div>
+    </div>
+    <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+      <div style="font-size:1.4rem; font-weight:700; color:var(--primary);">
+        내 가점: <span id="my-score">-</span>점
+      </div>
+      <button onclick="calcScore()" style="padding:10px 20px; background:var(--primary); color:#fff; border-radius:8px; font-weight:600; font-size:.9rem; cursor:pointer;">
+        계산하기
+      </button>
+    </div>
+  </div>
+
+  <!-- 지역 필터 -->
+  <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;">
+    
+    <button class="filter-btn filter-active" onclick="filterScore(this,'all')">전체</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'서울')">서울</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'경기')">경기</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'인천')">인천</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'부산')">부산</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'대구')">대구</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'광주')">광주</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'대전')">대전</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'울산')">울산</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'세종')">세종</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'강원')">강원</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'충북')">충북</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'충남')">충남</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'전북')">전북</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'전남')">전남</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'경북')">경북</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'경남')">경남</button>
+    
+    <button class="filter-btn" onclick="filterScore(this,'제주')">제주</button>
+    
+  </div>
+
+  <!-- 가점 통계 테이블 -->
+  <div style="overflow-x:auto;">
+    <table class="info-table">
+      <thead>
+        <tr>
+          <th>지역</th>
+          <th>거주 구분</th>
+          <th>통계 기준월</th>
+          <th class="num">최저 가점</th>
+          <th class="num">중간 가점</th>
+          <th class="num">평균 가점</th>
+          <th class="num">최고 가점</th>
+        </tr>
+      </thead>
+      <tbody id="score-tbody">
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2026.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">30</td>
+          <td class="num">35.44</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">61</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2026.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">19</td>
+          <td class="num">47</td>
+          <td class="num">47.62</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2026.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">49</td>
+          <td class="num">45.1</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2026.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">18</td>
+          <td class="num">45</td>
+          <td class="num">43.2</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2026.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">51</td>
+          <td class="num">50.29</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2026.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">38</td>
+          <td class="num">41.95</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2026.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">50</td>
+          <td class="num">64</td>
+          <td class="num">64.2</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">51</td>
+          <td class="num">48.63</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">48</td>
+          <td class="num">48.26</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>기타지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">39</td>
+          <td class="num">41.82</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">35</td>
+          <td class="num">38.71</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전남">
+          <td>전남</td>
+          <td>기타지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">56</td>
+          <td class="num">56</td>
+          <td class="num">56</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">56</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">64</td>
+          <td class="num">62.73</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">51</td>
+          <td class="num">57</td>
+          <td class="num">57.62</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">65</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">47</td>
+          <td class="num">47.86</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">36</td>
+          <td class="num">58</td>
+          <td class="num">57.59</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">78</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">42</td>
+          <td class="num">45.31</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">42</td>
+          <td class="num">44.14</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>기타지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">20</td>
+          <td class="num">26.5</td>
+          <td class="num">28.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">49</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">36</td>
+          <td class="num">62</td>
+          <td class="num">59.2</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">50</td>
+          <td class="num">50.42</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전남">
+          <td>전남</td>
+          <td>해당지역</td>
+          <td>2026.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">41</td>
+          <td class="num">52</td>
+          <td class="num">50.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">58</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">42</td>
+          <td class="num">67</td>
+          <td class="num">65.21</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">81</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">39</td>
+          <td class="num">40.34</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전남">
+          <td>전남</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">35</td>
+          <td class="num">37.61</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">49</td>
+          <td class="num">59</td>
+          <td class="num">58.9</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">67</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">51</td>
+          <td class="num">51.56</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>기타지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">34</td>
+          <td class="num">35.11</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">47</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">54</td>
+          <td class="num">59</td>
+          <td class="num">60.27</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">52</td>
+          <td class="num">50.74</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">67</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">44.5</td>
+          <td class="num">44.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">54</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">47</td>
+          <td class="num">64</td>
+          <td class="num">62.8</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>기타지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">44</td>
+          <td class="num">44.72</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2026.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">43</td>
+          <td class="num">44.66</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2026.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">39</td>
+          <td class="num">43.01</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">77</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2026.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">46</td>
+          <td class="num">45.41</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2026.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">58</td>
+          <td class="num">58</td>
+          <td class="num">58</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">58</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2026.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">51</td>
+          <td class="num">56</td>
+          <td class="num">56.3</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2026.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">37</td>
+          <td class="num">42.5</td>
+          <td class="num">44.45</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2026.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">39</td>
+          <td class="num">40</td>
+          <td class="num">43.66</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">52</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2026.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">34</td>
+          <td class="num">44</td>
+          <td class="num">45.07</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="제주">
+          <td>제주</td>
+          <td>해당지역</td>
+          <td>2026.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">37</td>
+          <td class="num">53</td>
+          <td class="num">53</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2026.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">37</td>
+          <td class="num">40.15</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>기타지역</td>
+          <td>2026.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">46</td>
+          <td class="num">46</td>
+          <td class="num">46</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">46</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2026.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">38.5</td>
+          <td class="num">40.82</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2026.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">60</td>
+          <td class="num">67</td>
+          <td class="num">66.74</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">48</td>
+          <td class="num">53</td>
+          <td class="num">53.71</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">36</td>
+          <td class="num">37.84</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">51</td>
+          <td class="num">51</td>
+          <td class="num">51</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">51</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">69</td>
+          <td class="num">69</td>
+          <td class="num">71.3</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">56</td>
+          <td class="num">53.38</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">70</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">67</td>
+          <td class="num">69</td>
+          <td class="num">70.15</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">29</td>
+          <td class="num">29</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">34</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">51</td>
+          <td class="num">47.53</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">42</td>
+          <td class="num">42</td>
+          <td class="num">42</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">42</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2025.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">36</td>
+          <td class="num">37.61</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">47</td>
+          <td class="num">48.17</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">50</td>
+          <td class="num">49.3</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">21</td>
+          <td class="num">47</td>
+          <td class="num">48.35</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">57</td>
+          <td class="num">56.11</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">81</td>
+        </tr>
+        
+        <tr class="score-row" data-region="세종">
+          <td>세종</td>
+          <td>기타지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">46</td>
+          <td class="num">60.5</td>
+          <td class="num">59.97</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">59</td>
+          <td class="num">69</td>
+          <td class="num">67.92</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="세종">
+          <td>세종</td>
+          <td>해당지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">46</td>
+          <td class="num">61</td>
+          <td class="num">61.13</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">41</td>
+          <td class="num">42.22</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">45</td>
+          <td class="num">57</td>
+          <td class="num">55.94</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>기타지역</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">23</td>
+          <td class="num">23</td>
+          <td class="num">23</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">23</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2025.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">48</td>
+          <td class="num">52</td>
+          <td class="num">52.44</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">48</td>
+          <td class="num">46.39</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">61</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">34</td>
+          <td class="num">37.06</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">34.5</td>
+          <td class="num">37.26</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">66</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">39</td>
+          <td class="num">39</td>
+          <td class="num">39</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">39</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">46</td>
+          <td class="num">65</td>
+          <td class="num">60.93</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전남">
+          <td>전남</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">31</td>
+          <td class="num">33.15</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">65</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">20</td>
+          <td class="num">54</td>
+          <td class="num">51.65</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">77</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">48</td>
+          <td class="num">50.08</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">63</td>
+          <td class="num">73</td>
+          <td class="num">72.51</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">82</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">40</td>
+          <td class="num">42.17</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">16</td>
+          <td class="num">29.5</td>
+          <td class="num">32.12</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">56</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">30.5</td>
+          <td class="num">33.25</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">47</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">20</td>
+          <td class="num">20</td>
+          <td class="num">20</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">20</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">34</td>
+          <td class="num">53</td>
+          <td class="num">56.1</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">39</td>
+          <td class="num">43.17</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>기타지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">36</td>
+          <td class="num">44</td>
+          <td class="num">44.15</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">42</td>
+          <td class="num">40.7</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">47</td>
+          <td class="num">47.56</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">51</td>
+          <td class="num">59.5</td>
+          <td class="num">60.12</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">35</td>
+          <td class="num">37.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">56</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">38</td>
+          <td class="num">47.5</td>
+          <td class="num">47</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">65</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">57.5</td>
+          <td class="num">55.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">52</td>
+          <td class="num">51.84</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">73</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">21</td>
+          <td class="num">21.5</td>
+          <td class="num">21.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">22</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">48</td>
+          <td class="num">54</td>
+          <td class="num">55.93</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2025.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">39</td>
+          <td class="num">41.26</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">56</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">44</td>
+          <td class="num">74</td>
+          <td class="num">68.37</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">58</td>
+          <td class="num">56.58</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">78</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2025.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">49</td>
+          <td class="num">46.74</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">35</td>
+          <td class="num">37.29</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">34</td>
+          <td class="num">36.46</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">67</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">34</td>
+          <td class="num">41</td>
+          <td class="num">42.85</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">53</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">54</td>
+          <td class="num">63</td>
+          <td class="num">62.88</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">48</td>
+          <td class="num">57</td>
+          <td class="num">57.47</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="광주">
+          <td>광주</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">41.5</td>
+          <td class="num">41.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">61</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">54</td>
+          <td class="num">52.32</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">63</td>
+          <td class="num">68</td>
+          <td class="num">68.02</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">80</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">55</td>
+          <td class="num">61</td>
+          <td class="num">61.56</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2025.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">42</td>
+          <td class="num">45.5</td>
+          <td class="num">47</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">60</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">32</td>
+          <td class="num">34.66</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">44</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">19</td>
+          <td class="num">53</td>
+          <td class="num">46.23</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">66</td>
+          <td class="num">69</td>
+          <td class="num">69.53</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">44</td>
+          <td class="num">54</td>
+          <td class="num">54</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">37</td>
+          <td class="num">38.39</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">70</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">46</td>
+          <td class="num">46.69</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">53</td>
+          <td class="num">65</td>
+          <td class="num">64.05</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">80</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">41</td>
+          <td class="num">41.93</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>기타지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">36</td>
+          <td class="num">36.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">48</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2025.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">33</td>
+          <td class="num">37.36</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">57</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">37</td>
+          <td class="num">64</td>
+          <td class="num">61.85</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">82</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">41</td>
+          <td class="num">42.12</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">55</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">34</td>
+          <td class="num">44</td>
+          <td class="num">43.69</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">60</td>
+        </tr>
+        
+        <tr class="score-row" data-region="광주">
+          <td>광주</td>
+          <td>해당지역</td>
+          <td>2025.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">34</td>
+          <td class="num">36</td>
+          <td class="num">36</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">38</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>기타지역</td>
+          <td>2025.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">67</td>
+          <td class="num">69</td>
+          <td class="num">69.34</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">35</td>
+          <td class="num">36.64</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">53</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2025.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">34</td>
+          <td class="num">42</td>
+          <td class="num">44.47</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">67</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">39</td>
+          <td class="num">41.96</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">57</td>
+          <td class="num">63</td>
+          <td class="num">62.73</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">33.5</td>
+          <td class="num">36.42</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">18</td>
+          <td class="num">18</td>
+          <td class="num">18</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">18</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">44</td>
+          <td class="num">44.35</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">76</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">43</td>
+          <td class="num">54</td>
+          <td class="num">53.65</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">43</td>
+          <td class="num">46.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">61</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">61</td>
+          <td class="num">65</td>
+          <td class="num">65.58</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>기타지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">32</td>
+          <td class="num">32</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">32</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">40</td>
+          <td class="num">41.2</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">32</td>
+          <td class="num">35.39</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>기타지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">41.5</td>
+          <td class="num">43</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">66</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">23</td>
+          <td class="num">45</td>
+          <td class="num">46.22</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">73</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">36</td>
+          <td class="num">38.13</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">67</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">50</td>
+          <td class="num">50</td>
+          <td class="num">50</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">50</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">48</td>
+          <td class="num">48.97</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">37</td>
+          <td class="num">39.04</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>해당지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">23</td>
+          <td class="num">37</td>
+          <td class="num">38.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">60</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">47</td>
+          <td class="num">46.49</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>기타지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">29</td>
+          <td class="num">29</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">29</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">20</td>
+          <td class="num">33.5</td>
+          <td class="num">37.3</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">60</td>
+          <td class="num">53</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">24</td>
+          <td class="num">24.25</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">27</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">33</td>
+          <td class="num">33</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">33</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">49</td>
+          <td class="num">48.9</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">46</td>
+          <td class="num">54.5</td>
+          <td class="num">54.33</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>해당지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">54</td>
+          <td class="num">58.5</td>
+          <td class="num">58.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">42</td>
+          <td class="num">40.4</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">44</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>기타지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">30</td>
+          <td class="num">30</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">30</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">36</td>
+          <td class="num">37.61</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">61</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">27.5</td>
+          <td class="num">27.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">29</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">41</td>
+          <td class="num">42.07</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">43</td>
+          <td class="num">41.4</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">58</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2025.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">29.5</td>
+          <td class="num">33</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">49</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2025.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">44</td>
+          <td class="num">44.12</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="세종">
+          <td>세종</td>
+          <td>기타지역</td>
+          <td>2025.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">42</td>
+          <td class="num">56</td>
+          <td class="num">56.07</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2025.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">37.5</td>
+          <td class="num">37.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">51</td>
+        </tr>
+        
+        <tr class="score-row" data-region="세종">
+          <td>세종</td>
+          <td>해당지역</td>
+          <td>2025.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">47</td>
+          <td class="num">58</td>
+          <td class="num">57.68</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2025.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">41</td>
+          <td class="num">42</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2025.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">50</td>
+          <td class="num">61</td>
+          <td class="num">61.67</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">83</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2025.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">67</td>
+          <td class="num">69</td>
+          <td class="num">69.52</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">19</td>
+          <td class="num">43.5</td>
+          <td class="num">41.2</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">50</td>
+          <td class="num">47.21</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">58</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">37</td>
+          <td class="num">39.36</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">58</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">44</td>
+          <td class="num">59</td>
+          <td class="num">58.88</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">78</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>기타지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">32</td>
+          <td class="num">32</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">32</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">42</td>
+          <td class="num">42.33</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">52</td>
+          <td class="num">60</td>
+          <td class="num">60.48</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">42</td>
+          <td class="num">42.64</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">53</td>
+          <td class="num">52.94</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">37</td>
+          <td class="num">42.03</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">77</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">16</td>
+          <td class="num">51</td>
+          <td class="num">50.28</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">78</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">46</td>
+          <td class="num">55</td>
+          <td class="num">55.97</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">44</td>
+          <td class="num">42.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">65</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">48</td>
+          <td class="num">45.05</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">19</td>
+          <td class="num">31</td>
+          <td class="num">34.64</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">81</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">40</td>
+          <td class="num">40</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">40</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">34.5</td>
+          <td class="num">38.18</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">56</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">50</td>
+          <td class="num">63</td>
+          <td class="num">62.08</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">50</td>
+          <td class="num">64</td>
+          <td class="num">64.02</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>기타지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">31.5</td>
+          <td class="num">34</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">55</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2024.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">44.5</td>
+          <td class="num">46.94</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">48</td>
+          <td class="num">47.89</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전남">
+          <td>전남</td>
+          <td>해당지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">40</td>
+          <td class="num">40</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">40</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">48</td>
+          <td class="num">48.24</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">49</td>
+          <td class="num">74</td>
+          <td class="num">71.61</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">81</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">39</td>
+          <td class="num">39.79</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">40</td>
+          <td class="num">41.92</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">76</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">57</td>
+          <td class="num">54.94</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">78</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">14</td>
+          <td class="num">46</td>
+          <td class="num">45.12</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">82</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>기타지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">41</td>
+          <td class="num">41</td>
+          <td class="num">42</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">44</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>기타지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">40</td>
+          <td class="num">40</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">40</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.10</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">45</td>
+          <td class="num">45.03</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">38</td>
+          <td class="num">74</td>
+          <td class="num">67.19</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">37</td>
+          <td class="num">45</td>
+          <td class="num">45.61</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">60</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2024.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">50.5</td>
+          <td class="num">51.13</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2024.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">34</td>
+          <td class="num">53</td>
+          <td class="num">51.72</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">19</td>
+          <td class="num">54</td>
+          <td class="num">51.61</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2024.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">51</td>
+          <td class="num">48.3</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.09</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">48</td>
+          <td class="num">44.79</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>기타지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">20</td>
+          <td class="num">21</td>
+          <td class="num">20.66</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">21</td>
+        </tr>
+        
+        <tr class="score-row" data-region="제주">
+          <td>제주</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">55</td>
+          <td class="num">56.03</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">32</td>
+          <td class="num">35.6</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">47</td>
+          <td class="num">46.98</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">35</td>
+          <td class="num">69</td>
+          <td class="num">66.94</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">38</td>
+          <td class="num">52</td>
+          <td class="num">53.4</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">42</td>
+          <td class="num">47</td>
+          <td class="num">48.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">39</td>
+          <td class="num">41.16</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">51.5</td>
+          <td class="num">52.46</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">37</td>
+          <td class="num">37</td>
+          <td class="num">37</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">37</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.08</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">46</td>
+          <td class="num">46.97</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">73</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">37</td>
+          <td class="num">66</td>
+          <td class="num">65.36</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">50</td>
+          <td class="num">48.78</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">44</td>
+          <td class="num">68</td>
+          <td class="num">67.34</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">64</td>
+          <td class="num">62.95</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">58</td>
+          <td class="num">65</td>
+          <td class="num">65.93</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">42.5</td>
+          <td class="num">45.49</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">36</td>
+          <td class="num">37.81</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>해당지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">32</td>
+          <td class="num">34.92</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.07</td>
+          <td class="num" style="color:var(--success); font-weight:600;">36</td>
+          <td class="num">58</td>
+          <td class="num">56.22</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">73</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">41</td>
+          <td class="num">43.93</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">58</td>
+          <td class="num">73.5</td>
+          <td class="num">71.52</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">69</td>
+          <td class="num">65.43</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">78</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">46</td>
+          <td class="num">62</td>
+          <td class="num">62.24</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">45</td>
+          <td class="num">64</td>
+          <td class="num">62</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전남">
+          <td>전남</td>
+          <td>해당지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">41</td>
+          <td class="num">58</td>
+          <td class="num">57.59</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">44</td>
+          <td class="num">57</td>
+          <td class="num">55.16</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">33</td>
+          <td class="num">35.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">56</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">51</td>
+          <td class="num">60</td>
+          <td class="num">59.92</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.06</td>
+          <td class="num" style="color:var(--success); font-weight:600;">45</td>
+          <td class="num">69</td>
+          <td class="num">66.22</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">76</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">65</td>
+          <td class="num">73</td>
+          <td class="num">72.73</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">43</td>
+          <td class="num">54</td>
+          <td class="num">56.35</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">84</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">45</td>
+          <td class="num">60</td>
+          <td class="num">59.29</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">39</td>
+          <td class="num">41.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">46</td>
+          <td class="num">46.81</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">43.5</td>
+          <td class="num">45.32</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">65</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">39.5</td>
+          <td class="num">41.79</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">46</td>
+          <td class="num">45.8</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.05</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">41</td>
+          <td class="num">40.85</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">67</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">36</td>
+          <td class="num">38.98</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">66</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">39</td>
+          <td class="num">41.34</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="광주">
+          <td>광주</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">45</td>
+          <td class="num">46.23</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">77</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>기타지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">37</td>
+          <td class="num">42</td>
+          <td class="num">41.6</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">47</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">33</td>
+          <td class="num">38.07</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">66</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">36</td>
+          <td class="num">38.19</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">60</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">32.5</td>
+          <td class="num">36</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">52</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">42</td>
+          <td class="num">43.14</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">35</td>
+          <td class="num">37.54</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">59</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">33</td>
+          <td class="num">33.14</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">52</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">41</td>
+          <td class="num">44.44</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">60</td>
+          <td class="num">55.53</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">36</td>
+          <td class="num">55</td>
+          <td class="num">54.78</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">64</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>기타지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">37</td>
+          <td class="num">38.8</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">56</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>기타지역</td>
+          <td>2024.04</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">35.5</td>
+          <td class="num">35.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">38</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2024.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">24</td>
+          <td class="num">31</td>
+          <td class="num">33.18</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">52</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>기타지역</td>
+          <td>2024.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">37</td>
+          <td class="num">37</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">46</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2024.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">58</td>
+          <td class="num">66</td>
+          <td class="num">65.25</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">73</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대구">
+          <td>대구</td>
+          <td>해당지역</td>
+          <td>2024.03</td>
+          <td class="num" style="color:var(--success); font-weight:600;">36</td>
+          <td class="num">51.5</td>
+          <td class="num">51.82</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">30</td>
+          <td class="num">41</td>
+          <td class="num">42.93</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="광주">
+          <td>광주</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">35</td>
+          <td class="num">38.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">66</td>
+        </tr>
+        
+        <tr class="score-row" data-region="전북">
+          <td>전북</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">52</td>
+          <td class="num">66</td>
+          <td class="num">64.84</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">35</td>
+          <td class="num">41.8</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">65</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">44</td>
+          <td class="num">45.81</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">37</td>
+          <td class="num">39.03</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">33</td>
+          <td class="num">42.5</td>
+          <td class="num">44.34</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">48</td>
+          <td class="num">65.5</td>
+          <td class="num">62.96</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">73</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">42</td>
+          <td class="num">44.9</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">65</td>
+        </tr>
+        
+        <tr class="score-row" data-region="제주">
+          <td>제주</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">40</td>
+          <td class="num">52</td>
+          <td class="num">52.23</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">19</td>
+          <td class="num">35</td>
+          <td class="num">37.87</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.02</td>
+          <td class="num" style="color:var(--success); font-weight:600;">23</td>
+          <td class="num">38</td>
+          <td class="num">40.98</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">28</td>
+          <td class="num">35.5</td>
+          <td class="num">40.62</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="광주">
+          <td>광주</td>
+          <td>해당지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">43</td>
+          <td class="num">44.62</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">49</td>
+          <td class="num">55</td>
+          <td class="num">55.83</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">53</td>
+          <td class="num">59</td>
+          <td class="num">58.87</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="광주">
+          <td>광주</td>
+          <td>기타지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">41</td>
+          <td class="num">45.5</td>
+          <td class="num">45.5</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">50</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">22</td>
+          <td class="num">32</td>
+          <td class="num">35</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">54</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">56</td>
+          <td class="num">63</td>
+          <td class="num">62.26</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">67</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">59</td>
+          <td class="num">73</td>
+          <td class="num">70.75</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">79</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>해당지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">48.5</td>
+          <td class="num">49.19</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">73</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2024.01</td>
+          <td class="num" style="color:var(--success); font-weight:600;">23</td>
+          <td class="num">39.5</td>
+          <td class="num">40.41</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">66</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충남">
+          <td>충남</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">47</td>
+          <td class="num">59</td>
+          <td class="num">59.36</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">72</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경남">
+          <td>경남</td>
+          <td>기타지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">33.5</td>
+          <td class="num">35.25</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">42</td>
+        </tr>
+        
+        <tr class="score-row" data-region="부산">
+          <td>부산</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">25</td>
+          <td class="num">33</td>
+          <td class="num">36.44</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="대전">
+          <td>대전</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">41</td>
+          <td class="num">42.95</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">62</td>
+        </tr>
+        
+        <tr class="score-row" data-region="울산">
+          <td>울산</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">36</td>
+          <td class="num">42</td>
+          <td class="num">45.42</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>기타지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">59</td>
+          <td class="num">66</td>
+          <td class="num">66</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">76</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경북">
+          <td>경북</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">36</td>
+          <td class="num">39.16</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="서울">
+          <td>서울</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">63</td>
+          <td class="num">60.02</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">27</td>
+          <td class="num">44</td>
+          <td class="num">44.54</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">63</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">43</td>
+          <td class="num">46.17</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="충북">
+          <td>충북</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">43</td>
+          <td class="num">52</td>
+          <td class="num">52.8</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="인천">
+          <td>인천</td>
+          <td>해당지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">29</td>
+          <td class="num">52</td>
+          <td class="num">51.23</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">75</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">45</td>
+          <td class="num">45.85</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">69</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타경기</td>
+          <td>2023.12</td>
+          <td class="num" style="color:var(--success); font-weight:600;">32</td>
+          <td class="num">55</td>
+          <td class="num">52.51</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">71</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>해당지역</td>
+          <td>2023.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">31</td>
+          <td class="num">47</td>
+          <td class="num">46.93</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+        <tr class="score-row" data-region="강원">
+          <td>강원</td>
+          <td>해당지역</td>
+          <td>2023.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">42</td>
+          <td class="num">56.5</td>
+          <td class="num">56</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">68</td>
+        </tr>
+        
+        <tr class="score-row" data-region="경기">
+          <td>경기</td>
+          <td>기타지역</td>
+          <td>2023.11</td>
+          <td class="num" style="color:var(--success); font-weight:600;">26</td>
+          <td class="num">51</td>
+          <td class="num">51.55</td>
+          <td class="num" style="color:var(--danger); font-weight:600;">74</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:.78rem; color:var(--text-muted); margin-top:12px;">※ 당첨가점 통계는 과거 청약 결과를 기반으로 합니다. 실제 당첨가점은 청약 시기와 경쟁률에 따라 다를 수 있습니다.</p>
+
+  <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
+
+</div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>wooaaptpass.wooahouse.com — 청약 정보 허브</p>
+      <p class="footer-links">
+        <a href="/privacy.html">개인정보처리방침</a>
+        <span>|</span>
+        <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약홈 바로가기</a>
+      </p>
+      <p class="footer-note">본 사이트의 데이터는 공공데이터포털(청약홈 API)을 기반으로 자동 수집됩니다. 청약 신청 전 반드시 청약홈 공식 사이트에서 확인하세요.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+  
+<script>
+function calcScore() {
+  var nohome = parseInt(document.getElementById('score-nohome').value, 10);
+  var family = parseInt(document.getElementById('score-family').value, 10);
+  var bank   = parseInt(document.getElementById('score-bank').value, 10);
+  var total  = nohome + family + bank;
+  document.getElementById('my-score').textContent = total;
+
+  /* 내 점수 이상의 최저가점 행 하이라이트 */
+  document.querySelectorAll('.score-row').forEach(function (tr) {
+    var lwet = parseInt(tr.cells[3].textContent, 10);
+    tr.style.background = (total >= lwet) ? 'var(--primary-light)' : '';
+  });
+}
+
+function filterScore(btn, region) {
+  document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('filter-active'); });
+  btn.classList.add('filter-active');
+  document.querySelectorAll('.score-row').forEach(function (tr) {
+    tr.style.display = (region === 'all' || tr.dataset.region === region) ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

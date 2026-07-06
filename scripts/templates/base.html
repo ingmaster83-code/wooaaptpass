@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}aptpass — 청약 정보 허브{% endblock %}</title>
+  <meta name="description" content="{% block description %}2026년 전국 아파트 청약 일정, 분양가, 경쟁률을 한눈에 확인하세요.{% endblock %}">
+  <meta property="og:title" content="{% block og_title %}aptpass{% endblock %}">
+  <meta property="og:description" content="{% block og_desc %}전국 청약 정보 허브{% endblock %}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="aptpass">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{% block canonical %}https://wooaaptpass.wooahouse.com/{% endblock %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{% block css_path %}/{% endblock %}css/style.css">
+  {% block extra_head %}{% endblock %}
+  <!-- 검색엔진 인증 -->
+  <meta name="naver-site-verification" content="6c6dda1cd2bc92df9969e9f29b3970fa857bb7d8">
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-6464921081676309">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-12ZGPE28JM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-12ZGPE28JM');
+  </script>
+</head>
+<body {% block body_attrs %}{% endblock %}>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">apt<span>pass</span></a>
+      <nav class="nav-links">
+        <a href="/list.html">청약목록</a>
+        <a href="/calendar.html">캘린더</a>
+        <a href="/residual.html">무순위</a>
+        <a href="/score.html">당첨가점</a>
+      </nav>
+      <div class="header-search">
+        <input type="search" id="header-search" placeholder="단지명, 지역 검색" autocomplete="off">
+        <button type="button" aria-label="검색">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>wooaaptpass.wooahouse.com — 청약 정보 허브</p>
+      <p class="footer-links">
+        <a href="/privacy.html">개인정보처리방침</a>
+        <span>|</span>
+        <a href="https://www.applyhome.co.kr" target="_blank" rel="noopener">청약홈 바로가기</a>
+      </p>
+      <p class="footer-note">본 사이트의 데이터는 공공데이터포털(청약홈 API)을 기반으로 자동 수집됩니다. 청약 신청 전 반드시 청약홈 공식 사이트에서 확인하세요.</p>
+    </div>
+  </footer>
+
+  <script src="{% block js_path %}/{% endblock %}js/main.js" defer></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

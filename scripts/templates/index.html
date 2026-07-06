@@ -1,0 +1,181 @@
+﻿{% extends "base.html" %}
+
+{% block title %}{{ year }}년 청약 일정 총정리 — 분양정보 &amp; 경쟁률 | aptpass{% endblock %}
+{% block description %}{{ year }}년 전국 아파트 청약 일정, 분양가, 경쟁률을 한눈에 확인하세요. 무순위 청약, 특별공급 신청현황, 당첨가점 커트라인 제공.{% endblock %}
+{% block og_title %}{{ year }}년 청약 일정 총정리 | aptpass{% endblock %}
+{% block og_desc %}전국 아파트 청약 정보 허브 — 분양가, 경쟁률, 당첨가점{% endblock %}
+{% block canonical %}https://wooaaptpass.wooahouse.com/{% endblock %}
+
+{% block content %}
+  <!-- 상단 광고 -->
+  <div class="container">
+    <div class="ad-banner ad-top"></div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>{{ year }}년 청약 정보, 한눈에 📋</h1>
+      <p>청약홈 공식 데이터 기반 · 매일 새벽 2시 자동 업데이트</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="num">{{ total_active }}</span>
+          <span class="label">현재 청약 진행 중</span>
+        </div>
+        <div class="hero-stat">
+          <span class="num">{{ top6 | length }}</span>
+          <span class="label">D-30 이내 청약 임박</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP 6 임박 단지 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        🔥 청약 임박 단지 TOP 6
+        <a href="/list.html">전체 보기 →</a>
+      </div>
+      <div class="card-grid">
+        {% for item in top6 %}
+        {% set dd = item._dday %}
+        <a class="apt-card" href="/apt/{{ item.HOUSE_NM | slugify }}.html">
+          <div class="apt-card-header">
+            <div>
+              <div class="apt-card-name">{{ item.HOUSE_NM }}</div>
+              <div class="apt-card-loc">📍 {{ item.HSSPLY_ADRES[:20] }}{% if item.HSSPLY_ADRES | length > 20 %}…{% endif %}</div>
+            </div>
+            <span class="badge badge-{{ dd.cls }}">{{ dd.label }}</span>
+          </div>
+          <span class="badge-type">{{ item | house_type_name }}</span>
+          <div class="apt-card-body">
+            <div>
+              <div class="apt-card-info-label">1순위 청약일</div>
+              <div class="apt-card-info-value">{{ item.GNRL_RNK1_CRSPAREA_RCPTDE or '-' }}</div>
+            </div>
+            <div>
+              <div class="apt-card-info-label">총 세대수</div>
+              <div class="apt-card-info-value">{{ '{:,}'.format(item.TOT_SUPLY_HSHLDCO | int) }}세대</div>
+            </div>
+            <div>
+              <div class="apt-card-info-label">지역</div>
+              <div class="apt-card-info-value">{{ item.SUBSCRPT_AREA_CODE_NM }}</div>
+            </div>
+            <div>
+              <div class="apt-card-info-label">공급유형</div>
+              <div class="apt-card-info-value">{{ item.HOUSE_DTL_SECD_NM or '민영' }}</div>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- 캘린더 + 광고 -->
+  <section class="section" style="background:var(--card-bg); padding:40px 0;">
+    <div class="container">
+      <div class="layout-with-sidebar">
+        <div class="layout-main">
+          <div class="section-title" style="margin-bottom:20px;">
+            📅 {{ year }}년 {{ today_str[-8:-3] }} 청약 캘린더
+            <a href="/calendar.html">전체 보기 →</a>
+          </div>
+          <div class="cal-mini">
+            <div class="cal-mini-header">
+              <span id="cal-header" style="font-size:.95rem;"></span>
+            </div>
+            <div class="cal-grid" id="cal-grid"></div>
+          </div>
+          <div style="display:flex; gap:14px; margin-top:10px; font-size:.82rem; color:var(--text-secondary);">
+            <span><i class="dot dot-blue" style="display:inline-block;"></i> 특별공급</span>
+            <span><i class="dot dot-green" style="display:inline-block;"></i> 1순위 청약</span>
+            <span><i class="dot dot-orange" style="display:inline-block;"></i> 당첨 발표</span>
+          </div>
+        </div>
+        <div class="layout-side">
+          <div class="ad-banner ad-side"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 중간 광고 -->
+  <div class="container" style="padding:24px 0 0;">
+    <div class="ad-banner ad-mid"></div>
+  </div>
+
+  <!-- 지역별 청약 현황 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">🗺️ 지역별 청약 현황</div>
+      <div class="region-grid">
+        {% set regions = ['서울','경기','인천','부산','대구','광주','대전','울산','세종','강원','충북','충남','전북','전남','경북','경남','제주'] %}
+        {% for r in regions %}
+        <a class="region-card" href="/지역/{{ r }}.html">
+          <div class="name">{{ r }}</div>
+          <div class="count">{{ region_counts.get(r, 0) }}건</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- 하단 광고 -->
+  <div class="container" style="padding-bottom:32px;">
+    <div class="ad-banner ad-mid"></div>
+  </div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+(function () {
+  var events = {{ cal_events | safe }};
+  var today = new Date();
+  var year = today.getFullYear();
+  var month = today.getMonth();
+  var daysInMonth = new Date(year, month + 1, 0).getDate();
+  var firstDay = new Date(year, month, 1).getDay();
+
+  var header = document.getElementById('cal-header');
+  var grid   = document.getElementById('cal-grid');
+  if (!header || !grid) return;
+
+  var KR_MONTHS = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+  header.textContent = year + '년 ' + KR_MONTHS[month];
+
+  var days = ['일','월','화','수','목','금','토'];
+  days.forEach(function (d) {
+    var el = document.createElement('div');
+    el.className = 'cal-day-header';
+    el.textContent = d;
+    grid.appendChild(el);
+  });
+
+  for (var i = 0; i < firstDay; i++) {
+    var empty = document.createElement('div');
+    empty.className = 'cal-day other-month';
+    grid.appendChild(empty);
+  }
+
+  for (var d = 1; d <= daysInMonth; d++) {
+    var cell = document.createElement('div');
+    cell.className = 'cal-day' + (d === today.getDate() ? ' today' : '');
+    cell.textContent = d;
+    var dots = events[String(d)];
+    if (dots) {
+      var dotWrap = document.createElement('div');
+      dotWrap.className = 'cal-dot';
+      dots.slice(0, 3).forEach(function (cls) {
+        var dot = document.createElement('i');
+        dot.className = 'dot dot-' + cls;
+        dotWrap.appendChild(dot);
+      });
+      cell.appendChild(dotWrap);
+    }
+    grid.appendChild(cell);
+  }
+})();
+</script>
+{% endblock %}

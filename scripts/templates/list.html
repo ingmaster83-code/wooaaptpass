@@ -1,0 +1,115 @@
+﻿{% extends "base.html" %}
+
+{% block title %}{{ year }}년 청약 목록 전체 — 분양가 일정 | aptpass{% endblock %}
+{% block description %}{{ year }}년 전국 아파트 청약 전체 목록. 분양가, 청약 일정, 특별공급 세대수를 지역·날짜별로 확인하세요.{% endblock %}
+{% block og_title %}{{ year }}년 청약 목록 | aptpass{% endblock %}
+{% block og_desc %}전국 아파트 청약 목록 — 분양가 · 일정 · 특별공급 세대수{% endblock %}
+{% block canonical %}https://wooaaptpass.wooahouse.com/list.html{% endblock %}
+
+{% block content %}
+  <div class="container" style="padding-top:24px;">
+
+    <div class="section-title" style="margin-bottom:8px;">📋 청약 목록 ({{ items | length }}건)</div>
+    <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">계약 종료일 기준 현재 진행 중인 청약만 표시됩니다. {{ today_str }} 기준.</p>
+
+    <!-- 광고 -->
+    <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
+
+    <!-- 필터 -->
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;">
+      {% set regions = ['서울','경기','인천','부산','대구','광주','대전','울산','세종','강원','충북','충남','전북','전남','경북','경남','제주'] %}
+      <button class="filter-btn filter-active" data-filter="all" onclick="filterList(this,'all')">전체 ({{ items | length }})</button>
+      {% for r in regions %}
+      {% set cnt = items | selectattr('SUBSCRPT_AREA_CODE_NM','equalto',r) | list | length %}
+      {% if cnt > 0 %}
+      <button class="filter-btn" data-filter="{{ r }}" onclick="filterList(this,'{{ r }}')">{{ r }} ({{ cnt }})</button>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- 목록 테이블 -->
+    <div style="overflow-x:auto;">
+      <table class="info-table" id="apt-list-table">
+        <thead>
+          <tr>
+            <th>단지명</th>
+            <th>지역</th>
+            <th class="num">세대수</th>
+            <th>1순위 청약일</th>
+            <th>당첨 발표</th>
+            <th class="num">D-Day</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in items %}
+          {% set dd = item._dday %}
+          <tr class="apt-list-row" data-region="{{ item.SUBSCRPT_AREA_CODE_NM }}">
+            <td>
+              <a href="/apt/{{ item.HOUSE_NM | slugify }}.html" style="color:var(--text-primary); font-weight:600; text-decoration:none;">
+                {{ item.HOUSE_NM }}
+              </a>
+              {% if item.SPECLT_RDN_EARTH_AT == 'Y' %}<span class="badge-type" style="font-size:.7rem; padding:1px 5px; background:#FFF7ED; color:#C2410C; margin-left:4px;">투기과열</span>{% endif %}
+              {% if item.IMPRMN_BSNS_AT == 'Y' %}<span class="badge-type" style="font-size:.7rem; padding:1px 5px; background:#F0FDF4; color:#16A34A; margin-left:4px;">재개발</span>{% endif %}
+            </td>
+            <td><a href="/지역/{{ item.SUBSCRPT_AREA_CODE_NM }}.html">{{ item.SUBSCRPT_AREA_CODE_NM }}</a></td>
+            <td class="num">{{ '{:,}'.format(item.TOT_SUPLY_HSHLDCO | int) }}</td>
+            <td>{{ item.GNRL_RNK1_CRSPAREA_RCPTDE | fmt_date }}</td>
+            <td>{{ item.PRZWNER_PRESNATN_DE | fmt_date }}</td>
+            <td class="num"><span class="badge badge-{{ dd.cls }}" style="font-size:.75rem;">{{ dd.label }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 무순위 섹션 -->
+    {% if residual %}
+    <div class="section-title" style="margin-top:40px; margin-bottom:16px;">🏷️ 무순위 · 잔여세대 ({{ residual | length }}건)</div>
+    <div style="overflow-x:auto;">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>단지명</th>
+            <th>지역</th>
+            <th class="num">세대수</th>
+            <th>접수일</th>
+            <th class="num">D-Day</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in residual %}
+          {% set dd = item._dday %}
+          <tr>
+            <td>
+              <a href="/residual.html" style="color:var(--text-primary); font-weight:600; text-decoration:none;">
+                {{ item.HOUSE_NM or item.PBLANC_NM or '-' }}
+              </a>
+            </td>
+            <td>{{ item.SUBSCRPT_AREA_CODE_NM or '-' }}</td>
+            <td class="num">{{ item.REMNDR_HSHLDCO or item.TOT_SUPLY_HSHLDCO or '-' }}</td>
+            <td>{{ (item.SUBSCRPT_RCEPT_BGNDE or item.GNRL_RCEPT_BGNDE) | fmt_date }}</td>
+            <td class="num"><span class="badge badge-{{ dd.cls }}" style="font-size:.75rem;">{{ dd.label }}</span></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+
+    <!-- 광고 -->
+    <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
+
+  </div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+function filterList(btn, region) {
+  document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('filter-active'); });
+  btn.classList.add('filter-active');
+  document.querySelectorAll('.apt-list-row').forEach(function (row) {
+    row.style.display = (region === 'all' || row.dataset.region === region) ? '' : 'none';
+  });
+}
+</script>
+{% endblock %}

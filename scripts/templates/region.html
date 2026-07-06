@@ -1,0 +1,70 @@
+﻿{% extends "base.html" %}
+
+{% block title %}{{ region }} 청약 목록 {{ year }} — 분양가 일정 | aptpass{% endblock %}
+{% block description %}{{ region }} 아파트 청약 목록. 분양가, 청약 일정, 당첨가점을 확인하세요.{% endblock %}
+{% block og_title %}{{ region }} 청약 목록 | aptpass{% endblock %}
+{% block og_desc %}{{ region }} 아파트 청약 분양정보 — aptpass{% endblock %}
+{% block canonical %}https://wooaaptpass.wooahouse.com/지역/{{ region }}.html{% endblock %}
+
+{% block content %}
+  <div class="container" style="padding-top:24px;">
+
+    <div class="breadcrumb" style="margin-bottom:16px;">
+      <a href="/">홈</a><span>›</span>
+      <a href="/list.html">청약목록</a><span>›</span>
+      <span>{{ region }}</span>
+    </div>
+
+    <h1 style="font-size:1.4rem; font-weight:700; margin-bottom:8px;">{{ region }} 청약 목록</h1>
+    <p style="color:var(--text-secondary); font-size:.88rem; margin-bottom:20px;">{{ today_str }} 기준 · {{ items | length }}건</p>
+
+    <div class="ad-banner ad-mid" style="margin-bottom:24px;"></div>
+
+    {% if items %}
+    <div class="card-grid">
+      {% for item in items %}
+      {% set dd = item._dday %}
+      <a class="apt-card" href="/apt/{{ item.HOUSE_NM | slugify }}.html">
+        <div class="apt-card-header">
+          <div>
+            <div class="apt-card-name">{{ item.HOUSE_NM }}</div>
+            <div class="apt-card-loc">📍 {{ item.HSSPLY_ADRES[:25] }}{% if item.HSSPLY_ADRES | length > 25 %}…{% endif %}</div>
+          </div>
+          <span class="badge badge-{{ dd.cls }}">{{ dd.label }}</span>
+        </div>
+        <span class="badge-type">{{ item | house_type_name }}</span>
+        {% if item.SPECLT_RDN_EARTH_AT == 'Y' %}<span class="badge-type" style="background:#FFF7ED; color:#C2410C;">투기과열</span>{% endif %}
+        {% if item.IMPRMN_BSNS_AT == 'Y' %}<span class="badge-type" style="background:#F0FDF4; color:#16A34A;">재개발</span>{% endif %}
+        <div class="apt-card-body">
+          <div>
+            <div class="apt-card-info-label">1순위 청약일</div>
+            <div class="apt-card-info-value">{{ item.GNRL_RNK1_CRSPAREA_RCPTDE or '-' }}</div>
+          </div>
+          <div>
+            <div class="apt-card-info-label">총 세대수</div>
+            <div class="apt-card-info-value">{{ '{:,}'.format(item.TOT_SUPLY_HSHLDCO | int) }}세대</div>
+          </div>
+          <div>
+            <div class="apt-card-info-label">당첨 발표</div>
+            <div class="apt-card-info-value">{{ item.PRZWNER_PRESNATN_DE or '-' }}</div>
+          </div>
+          <div>
+            <div class="apt-card-info-label">입주 예정</div>
+            <div class="apt-card-info-value">{{ item.MVN_PREARNGE_YM | fmt_ym }}</div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div style="text-align:center; padding:60px 20px; color:var(--text-muted);">
+      <div style="font-size:2rem; margin-bottom:12px;">🏙️</div>
+      <p style="font-size:1rem;">현재 {{ region }} 지역의 청약 정보가 없습니다.</p>
+      <a href="/list.html" style="color:var(--primary); font-size:.9rem;">전체 청약목록 보기 →</a>
+    </div>
+    {% endif %}
+
+    <div class="ad-banner ad-mid" style="margin-top:32px;"></div>
+
+  </div>
+{% endblock %}

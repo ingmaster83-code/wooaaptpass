@@ -3,4 +3,6 @@ Allow: /
 Disallow: /privacy.html
 Disallow: /404.html
 
-Sitemap: https://aptpass.kr/sitemap.xml
+Sitemap: https://wooaaptpass.wooahouse.com/sitemap.xml
+
+#DaumWebMasterTool:1bdedaf075bc119a89e83f25837fa01eaefeeafffda5b030489ccebeabe0ec30:5OHFs/qHHlfCvAas17iLzw==

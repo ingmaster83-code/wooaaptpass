@@ -41,5 +41,5 @@ jobs:
           git add docs/ data/
           git diff --quiet && git diff --staged --quiet \
             || git commit -m "chore: auto-update $(date -u +'%Y-%m-%d')"
-          git pull --rebase origin master
+          git pull --rebase origin main
           git push

@@ -1,71 +1,5 @@
 [
   {
-    "AVRG_SCORE": 59.36,
-    "LWET_SCORE": 47,
-    "MED_SCORE": 59,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202312",
-    "SUBSCRPT_AREA_CODE": "312",
-    "SUBSCRPT_AREA_CODE_NM": "충남",
-    "TOP_SCORE": 72
-  },
-  {
-    "AVRG_SCORE": 50.59,
-    "LWET_SCORE": 32,
-    "MED_SCORE": 50,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202102",
-    "SUBSCRPT_AREA_CODE": "712",
-    "SUBSCRPT_AREA_CODE_NM": "경북",
-    "TOP_SCORE": 72
-  },
-  {
-    "AVRG_SCORE": 44.42,
-    "LWET_SCORE": 30,
-    "MED_SCORE": 40,
-    "RESIDE_SECD": "02",
-    "RESIDE_SECD_NM": "기타지역",
-    "STAT_DE": "202211",
-    "SUBSCRPT_AREA_CODE": "200",
-    "SUBSCRPT_AREA_CODE_NM": "강원",
-    "TOP_SCORE": 75
-  },
-  {
-    "AVRG_SCORE": 59.21,
-    "LWET_SCORE": 54,
-    "MED_SCORE": 60,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202006",
-    "SUBSCRPT_AREA_CODE": "500",
-    "SUBSCRPT_AREA_CODE_NM": "광주",
-    "TOP_SCORE": 67
-  },
-  {
-    "AVRG_SCORE": 37.98,
-    "LWET_SCORE": 23,
-    "MED_SCORE": 38,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202009",
-    "SUBSCRPT_AREA_CODE": "312",
-    "SUBSCRPT_AREA_CODE_NM": "충남",
-    "TOP_SCORE": 70
-  },
-  {
-    "AVRG_SCORE": 28.57,
-    "LWET_SCORE": 13,
-    "MED_SCORE": 21.5,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202101",
-    "SUBSCRPT_AREA_CODE": "600",
-    "SUBSCRPT_AREA_CODE_NM": "부산",
-    "TOP_SCORE": 60
-  },
-  {
     "AVRG_SCORE": 43.86,
     "LWET_SCORE": 23,
     "MED_SCORE": 44,
@@ -891,6 +825,171 @@
     "TOP_SCORE": 79
   },
   {
+    "AVRG_SCORE": 51.12,
+    "LWET_SCORE": 42,
+    "MED_SCORE": 49,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202204",
+    "SUBSCRPT_AREA_CODE": "400",
+    "SUBSCRPT_AREA_CODE_NM": "인천",
+    "TOP_SCORE": 72
+  },
+  {
+    "AVRG_SCORE": 37.14,
+    "LWET_SCORE": 25,
+    "MED_SCORE": 35,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202105",
+    "SUBSCRPT_AREA_CODE": "621",
+    "SUBSCRPT_AREA_CODE_NM": "경남",
+    "TOP_SCORE": 63
+  },
+  {
+    "AVRG_SCORE": 70.21,
+    "LWET_SCORE": 66,
+    "MED_SCORE": 69,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202109",
+    "SUBSCRPT_AREA_CODE": "100",
+    "SUBSCRPT_AREA_CODE_NM": "서울",
+    "TOP_SCORE": 79
+  },
+  {
+    "AVRG_SCORE": 42.35,
+    "LWET_SCORE": 31,
+    "MED_SCORE": 43.5,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202212",
+    "SUBSCRPT_AREA_CODE": "338",
+    "SUBSCRPT_AREA_CODE_NM": "세종",
+    "TOP_SCORE": 55
+  },
+  {
+    "AVRG_SCORE": 53.53,
+    "LWET_SCORE": 31,
+    "MED_SCORE": 55,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202004",
+    "SUBSCRPT_AREA_CODE": "700",
+    "SUBSCRPT_AREA_CODE_NM": "대구",
+    "TOP_SCORE": 69
+  },
+  {
+    "AVRG_SCORE": 35.5,
+    "LWET_SCORE": 33,
+    "MED_SCORE": 35.5,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202404",
+    "SUBSCRPT_AREA_CODE": "700",
+    "SUBSCRPT_AREA_CODE_NM": "대구",
+    "TOP_SCORE": 38
+  },
+  {
+    "AVRG_SCORE": 41.66,
+    "LWET_SCORE": 26,
+    "MED_SCORE": 44,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202103",
+    "SUBSCRPT_AREA_CODE": "200",
+    "SUBSCRPT_AREA_CODE_NM": "강원",
+    "TOP_SCORE": 57
+  },
+  {
+    "AVRG_SCORE": 52.94,
+    "LWET_SCORE": 32,
+    "MED_SCORE": 53,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202412",
+    "SUBSCRPT_AREA_CODE": "400",
+    "SUBSCRPT_AREA_CODE_NM": "인천",
+    "TOP_SCORE": 75
+  },
+  {
+    "AVRG_SCORE": 71.03,
+    "LWET_SCORE": 67,
+    "MED_SCORE": 70,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202109",
+    "SUBSCRPT_AREA_CODE": "100",
+    "SUBSCRPT_AREA_CODE_NM": "서울",
+    "TOP_SCORE": 81
+  },
+  {
+    "AVRG_SCORE": 55.6,
+    "LWET_SCORE": 21,
+    "MED_SCORE": 58,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202110",
+    "SUBSCRPT_AREA_CODE": "410",
+    "SUBSCRPT_AREA_CODE_NM": "경기",
+    "TOP_SCORE": 74
+  },
+  {
+    "AVRG_SCORE": 62,
+    "LWET_SCORE": 62,
+    "MED_SCORE": 62,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202206",
+    "SUBSCRPT_AREA_CODE": "100",
+    "SUBSCRPT_AREA_CODE_NM": "서울",
+    "TOP_SCORE": 62
+  },
+  {
+    "AVRG_SCORE": 59.36,
+    "LWET_SCORE": 47,
+    "MED_SCORE": 59,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202312",
+    "SUBSCRPT_AREA_CODE": "312",
+    "SUBSCRPT_AREA_CODE_NM": "충남",
+    "TOP_SCORE": 72
+  },
+  {
+    "AVRG_SCORE": 50.59,
+    "LWET_SCORE": 32,
+    "MED_SCORE": 50,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202102",
+    "SUBSCRPT_AREA_CODE": "712",
+    "SUBSCRPT_AREA_CODE_NM": "경북",
+    "TOP_SCORE": 72
+  },
+  {
+    "AVRG_SCORE": 44.42,
+    "LWET_SCORE": 30,
+    "MED_SCORE": 40,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202211",
+    "SUBSCRPT_AREA_CODE": "200",
+    "SUBSCRPT_AREA_CODE_NM": "강원",
+    "TOP_SCORE": 75
+  },
+  {
+    "AVRG_SCORE": 59.21,
+    "LWET_SCORE": 54,
+    "MED_SCORE": 60,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202006",
+    "SUBSCRPT_AREA_CODE": "500",
+    "SUBSCRPT_AREA_CODE_NM": "광주",
+    "TOP_SCORE": 67
+  },
+  {
     "AVRG_SCORE": 64.05,
     "LWET_SCORE": 53,
     "MED_SCORE": 65,
@@ -922,6 +1021,28 @@
     "SUBSCRPT_AREA_CODE": "312",
     "SUBSCRPT_AREA_CODE_NM": "충남",
     "TOP_SCORE": 48
+  },
+  {
+    "AVRG_SCORE": 37.98,
+    "LWET_SCORE": 23,
+    "MED_SCORE": 38,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202009",
+    "SUBSCRPT_AREA_CODE": "312",
+    "SUBSCRPT_AREA_CODE_NM": "충남",
+    "TOP_SCORE": 70
+  },
+  {
+    "AVRG_SCORE": 28.57,
+    "LWET_SCORE": 13,
+    "MED_SCORE": 21.5,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202101",
+    "SUBSCRPT_AREA_CODE": "600",
+    "SUBSCRPT_AREA_CODE_NM": "부산",
+    "TOP_SCORE": 60
   },
   {
     "AVRG_SCORE": 37.36,
@@ -1142,6 +1263,127 @@
     "SUBSCRPT_AREA_CODE": "410",
     "SUBSCRPT_AREA_CODE_NM": "경기",
     "TOP_SCORE": 62
+  },
+  {
+    "AVRG_SCORE": 44,
+    "LWET_SCORE": 37,
+    "MED_SCORE": 44,
+    "RESIDE_SECD": "03",
+    "RESIDE_SECD_NM": "기타경기",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "410",
+    "SUBSCRPT_AREA_CODE_NM": "경기",
+    "TOP_SCORE": 62
+  },
+  {
+    "AVRG_SCORE": 38.32,
+    "LWET_SCORE": 30,
+    "MED_SCORE": 37,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "621",
+    "SUBSCRPT_AREA_CODE_NM": "경남",
+    "TOP_SCORE": 55
+  },
+  {
+    "AVRG_SCORE": 38.65,
+    "LWET_SCORE": 28,
+    "MED_SCORE": 37,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "312",
+    "SUBSCRPT_AREA_CODE_NM": "충남",
+    "TOP_SCORE": 66
+  },
+  {
+    "AVRG_SCORE": 45.59,
+    "LWET_SCORE": 28,
+    "MED_SCORE": 46,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "400",
+    "SUBSCRPT_AREA_CODE_NM": "인천",
+    "TOP_SCORE": 69
+  },
+  {
+    "AVRG_SCORE": 45.6,
+    "LWET_SCORE": 38,
+    "MED_SCORE": 44,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "410",
+    "SUBSCRPT_AREA_CODE_NM": "경기",
+    "TOP_SCORE": 62
+  },
+  {
+    "AVRG_SCORE": 45.4,
+    "LWET_SCORE": 26,
+    "MED_SCORE": 46,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "400",
+    "SUBSCRPT_AREA_CODE_NM": "인천",
+    "TOP_SCORE": 70
+  },
+  {
+    "AVRG_SCORE": 57.65,
+    "LWET_SCORE": 28,
+    "MED_SCORE": 58,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "100",
+    "SUBSCRPT_AREA_CODE_NM": "서울",
+    "TOP_SCORE": 79
+  },
+  {
+    "AVRG_SCORE": 34.81,
+    "LWET_SCORE": 20,
+    "MED_SCORE": 32,
+    "RESIDE_SECD": "02",
+    "RESIDE_SECD_NM": "기타지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "410",
+    "SUBSCRPT_AREA_CODE_NM": "경기",
+    "TOP_SCORE": 69
+  },
+  {
+    "AVRG_SCORE": 45.03,
+    "LWET_SCORE": 21,
+    "MED_SCORE": 46,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "500",
+    "SUBSCRPT_AREA_CODE_NM": "광주",
+    "TOP_SCORE": 78
+  },
+  {
+    "AVRG_SCORE": 30,
+    "LWET_SCORE": 30,
+    "MED_SCORE": 30,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "690",
+    "SUBSCRPT_AREA_CODE_NM": "제주",
+    "TOP_SCORE": 30
+  },
+  {
+    "AVRG_SCORE": 52.26,
+    "LWET_SCORE": 37,
+    "MED_SCORE": 52,
+    "RESIDE_SECD": "01",
+    "RESIDE_SECD_NM": "해당지역",
+    "STAT_DE": "202606",
+    "SUBSCRPT_AREA_CODE": "712",
+    "SUBSCRPT_AREA_CODE_NM": "경북",
+    "TOP_SCORE": 71
   },
   {
     "AVRG_SCORE": 43.01,
@@ -10217,126 +10459,5 @@
     "SUBSCRPT_AREA_CODE": "712",
     "SUBSCRPT_AREA_CODE_NM": "경북",
     "TOP_SCORE": 60
-  },
-  {
-    "AVRG_SCORE": 51.12,
-    "LWET_SCORE": 42,
-    "MED_SCORE": 49,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202204",
-    "SUBSCRPT_AREA_CODE": "400",
-    "SUBSCRPT_AREA_CODE_NM": "인천",
-    "TOP_SCORE": 72
-  },
-  {
-    "AVRG_SCORE": 37.14,
-    "LWET_SCORE": 25,
-    "MED_SCORE": 35,
-    "RESIDE_SECD": "02",
-    "RESIDE_SECD_NM": "기타지역",
-    "STAT_DE": "202105",
-    "SUBSCRPT_AREA_CODE": "621",
-    "SUBSCRPT_AREA_CODE_NM": "경남",
-    "TOP_SCORE": 63
-  },
-  {
-    "AVRG_SCORE": 70.21,
-    "LWET_SCORE": 66,
-    "MED_SCORE": 69,
-    "RESIDE_SECD": "02",
-    "RESIDE_SECD_NM": "기타지역",
-    "STAT_DE": "202109",
-    "SUBSCRPT_AREA_CODE": "100",
-    "SUBSCRPT_AREA_CODE_NM": "서울",
-    "TOP_SCORE": 79
-  },
-  {
-    "AVRG_SCORE": 42.35,
-    "LWET_SCORE": 31,
-    "MED_SCORE": 43.5,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202212",
-    "SUBSCRPT_AREA_CODE": "338",
-    "SUBSCRPT_AREA_CODE_NM": "세종",
-    "TOP_SCORE": 55
-  },
-  {
-    "AVRG_SCORE": 53.53,
-    "LWET_SCORE": 31,
-    "MED_SCORE": 55,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202004",
-    "SUBSCRPT_AREA_CODE": "700",
-    "SUBSCRPT_AREA_CODE_NM": "대구",
-    "TOP_SCORE": 69
-  },
-  {
-    "AVRG_SCORE": 35.5,
-    "LWET_SCORE": 33,
-    "MED_SCORE": 35.5,
-    "RESIDE_SECD": "02",
-    "RESIDE_SECD_NM": "기타지역",
-    "STAT_DE": "202404",
-    "SUBSCRPT_AREA_CODE": "700",
-    "SUBSCRPT_AREA_CODE_NM": "대구",
-    "TOP_SCORE": 38
-  },
-  {
-    "AVRG_SCORE": 41.66,
-    "LWET_SCORE": 26,
-    "MED_SCORE": 44,
-    "RESIDE_SECD": "02",
-    "RESIDE_SECD_NM": "기타지역",
-    "STAT_DE": "202103",
-    "SUBSCRPT_AREA_CODE": "200",
-    "SUBSCRPT_AREA_CODE_NM": "강원",
-    "TOP_SCORE": 57
-  },
-  {
-    "AVRG_SCORE": 52.94,
-    "LWET_SCORE": 32,
-    "MED_SCORE": 53,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202412",
-    "SUBSCRPT_AREA_CODE": "400",
-    "SUBSCRPT_AREA_CODE_NM": "인천",
-    "TOP_SCORE": 75
-  },
-  {
-    "AVRG_SCORE": 71.03,
-    "LWET_SCORE": 67,
-    "MED_SCORE": 70,
-    "RESIDE_SECD": "01",
-    "RESIDE_SECD_NM": "해당지역",
-    "STAT_DE": "202109",
-    "SUBSCRPT_AREA_CODE": "100",
-    "SUBSCRPT_AREA_CODE_NM": "서울",
-    "TOP_SCORE": 81
-  },
-  {
-    "AVRG_SCORE": 55.6,
-    "LWET_SCORE": 21,
-    "MED_SCORE": 58,
-    "RESIDE_SECD": "02",
-    "RESIDE_SECD_NM": "기타지역",
-    "STAT_DE": "202110",
-    "SUBSCRPT_AREA_CODE": "410",
-    "SUBSCRPT_AREA_CODE_NM": "경기",
-    "TOP_SCORE": 74
-  },
-  {
-    "AVRG_SCORE": 62,
-    "LWET_SCORE": 62,
-    "MED_SCORE": 62,
-    "RESIDE_SECD": "02",
-    "RESIDE_SECD_NM": "기타지역",
-    "STAT_DE": "202206",
-    "SUBSCRPT_AREA_CODE": "100",
-    "SUBSCRPT_AREA_CODE_NM": "서울",
-    "TOP_SCORE": 62
   }
 ]

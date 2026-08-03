@@ -440,6 +440,94 @@
     "TOP_SCORE": "-"
   },
   {
+    "AVRG_SCORE": "48",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "059.9987B",
+    "LWET_SCORE": "48",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "48"
+  },
+  {
+    "AVRG_SCORE": "0",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "059.9987B",
+    "LWET_SCORE": "0",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "0"
+  },
+  {
+    "AVRG_SCORE": "0",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "074.9988A",
+    "LWET_SCORE": "0",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "0"
+  },
+  {
+    "AVRG_SCORE": "50",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "074.9988A",
+    "LWET_SCORE": "50",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "50"
+  },
+  {
+    "AVRG_SCORE": "21",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "084.9947A",
+    "LWET_SCORE": "21",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "21"
+  },
+  {
+    "AVRG_SCORE": "0",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "084.9947A",
+    "LWET_SCORE": "0",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "0"
+  },
+  {
+    "AVRG_SCORE": "19",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "084.9956B",
+    "LWET_SCORE": "19",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "19"
+  },
+  {
+    "AVRG_SCORE": "0",
+    "HOUSE_MANAGE_NO": "2026000327",
+    "HOUSE_TY": "084.9956B",
+    "LWET_SCORE": "0",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000327",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "0"
+  },
+  {
     "AVRG_SCORE": "-",
     "HOUSE_MANAGE_NO": "2026000316",
     "HOUSE_TY": "075.4736 ",

@@ -552,6 +552,30 @@
     "SUPLY_HSHLDCO": 7
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000448",
+    "HOUSE_TY": "069.7032 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000448",
+    "REQ_CNT": "5",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 7
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000448",
+    "HOUSE_TY": "069.7032 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000448",
+    "REQ_CNT": "10",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 7
+  },
+  {
     "CMPET_RATE": "(△17)",
     "HOUSE_MANAGE_NO": "2026000448",
     "HOUSE_TY": "084.9818 ",
@@ -573,6 +597,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 22
+  },
+  {
+    "CMPET_RATE": "(△13)",
+    "HOUSE_MANAGE_NO": "2026000448",
+    "HOUSE_TY": "084.9818 ",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000448",
+    "REQ_CNT": "2",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 22
+  },
+  {
+    "CMPET_RATE": "(△9)",
+    "HOUSE_MANAGE_NO": "2026000448",
+    "HOUSE_TY": "084.9818 ",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000448",
+    "REQ_CNT": "4",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 22
   },
   {
@@ -600,6 +648,30 @@
     "SUPLY_HSHLDCO": 60
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "078.8382 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 60
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "078.8382 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 60
+  },
+  {
     "CMPET_RATE": "61.69",
     "HOUSE_MANAGE_NO": "2026000446",
     "HOUSE_TY": "084.9115A",
@@ -621,6 +693,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 91
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "084.9115A",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 91
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "084.9115A",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 91
   },
   {
@@ -648,6 +744,30 @@
     "SUPLY_HSHLDCO": 125
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "084.9519B",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 125
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "084.9519B",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 125
+  },
+  {
     "CMPET_RATE": "28.11",
     "HOUSE_MANAGE_NO": "2026000446",
     "HOUSE_TY": "119.6206 ",
@@ -669,6 +789,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 66
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "119.6206 ",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 66
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "119.6206 ",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 66
   },
   {
@@ -696,6 +840,30 @@
     "SUPLY_HSHLDCO": 4
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "182.9263 ",
+    "MODEL_NO": "05",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 4
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000446",
+    "HOUSE_TY": "182.9263 ",
+    "MODEL_NO": "05",
+    "PBLANC_NO": "2026000446",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 4
+  },
+  {
     "CMPET_RATE": "8.29",
     "HOUSE_MANAGE_NO": "2026000445",
     "HOUSE_TY": "059.9831 ",
@@ -717,6 +885,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 31
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000445",
+    "HOUSE_TY": "059.9831 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000445",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 31
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000445",
+    "HOUSE_TY": "059.9831 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000445",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 31
   },
   {
@@ -744,6 +936,30 @@
     "SUPLY_HSHLDCO": 1
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000445",
+    "HOUSE_TY": "074.9225A",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000445",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 1
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000445",
+    "HOUSE_TY": "074.9225A",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000445",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 1
+  },
+  {
     "CMPET_RATE": "16.58",
     "HOUSE_MANAGE_NO": "2026000445",
     "HOUSE_TY": "074.9823B",
@@ -765,6 +981,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 19
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000445",
+    "HOUSE_TY": "074.9823B",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000445",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 19
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000445",
+    "HOUSE_TY": "074.9823B",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000445",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 19
   },
   {
@@ -792,6 +1032,30 @@
     "SUPLY_HSHLDCO": 179
   },
   {
+    "CMPET_RATE": "(△173)",
+    "HOUSE_MANAGE_NO": "2026000443",
+    "HOUSE_TY": "059.9986A",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000443",
+    "REQ_CNT": "3",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 179
+  },
+  {
+    "CMPET_RATE": "(△173)",
+    "HOUSE_MANAGE_NO": "2026000443",
+    "HOUSE_TY": "059.9986A",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000443",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 179
+  },
+  {
     "CMPET_RATE": "(△166)",
     "HOUSE_MANAGE_NO": "2026000443",
     "HOUSE_TY": "059.9992B",
@@ -813,6 +1077,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 169
+  },
+  {
+    "CMPET_RATE": "(△162)",
+    "HOUSE_MANAGE_NO": "2026000443",
+    "HOUSE_TY": "059.9992B",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000443",
+    "REQ_CNT": "2",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 169
+  },
+  {
+    "CMPET_RATE": "(△162)",
+    "HOUSE_MANAGE_NO": "2026000443",
+    "HOUSE_TY": "059.9992B",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000443",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 169
   },
   {
@@ -1392,6 +1680,30 @@
     "SUPLY_HSHLDCO": 1
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "074.9469 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 1
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "074.9469 ",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 1
+  },
+  {
     "CMPET_RATE": "37.00",
     "HOUSE_MANAGE_NO": "2026000436",
     "HOUSE_TY": "075.9849 ",
@@ -1413,6 +1725,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 1
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "075.9849 ",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 1
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "075.9849 ",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 1
   },
   {
@@ -1440,6 +1776,30 @@
     "SUPLY_HSHLDCO": 6
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "084.9630A",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 6
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "084.9630A",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 6
+  },
+  {
     "CMPET_RATE": "58.50",
     "HOUSE_MANAGE_NO": "2026000436",
     "HOUSE_TY": "084.9650B",
@@ -1464,6 +1824,30 @@
     "SUPLY_HSHLDCO": 2
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "084.9650B",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 2
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "084.9650B",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 2
+  },
+  {
     "CMPET_RATE": "48.33",
     "HOUSE_MANAGE_NO": "2026000436",
     "HOUSE_TY": "084.8968C",
@@ -1485,6 +1869,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 3
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "084.8968C",
+    "MODEL_NO": "05",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 3
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000436",
+    "HOUSE_TY": "084.8968C",
+    "MODEL_NO": "05",
+    "PBLANC_NO": "2026000436",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 3
   },
   {
@@ -1944,6 +2352,30 @@
     "SUPLY_HSHLDCO": 5
   },
   {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "063.1378A",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "5",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 5
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "063.1378A",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "1",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 5
+  },
+  {
     "CMPET_RATE": "(△1)",
     "HOUSE_MANAGE_NO": "2026000424",
     "HOUSE_TY": "063.0513B",
@@ -1968,6 +2400,30 @@
     "SUPLY_HSHLDCO": 2
   },
   {
+    "CMPET_RATE": "1.00",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "063.0513B",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "1",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 2
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "063.0513B",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "3",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 2
+  },
+  {
     "CMPET_RATE": "(△3)",
     "HOUSE_MANAGE_NO": "2026000424",
     "HOUSE_TY": "074.3998B",
@@ -1989,6 +2445,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 3
+  },
+  {
+    "CMPET_RATE": "1.00",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "074.3998B",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "3",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 3
+  },
+  {
+    "CMPET_RATE": "-",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "074.3998B",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "0",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 3
   },
   {
@@ -2013,6 +2493,30 @@
     "RESIDE_SECD": "02",
     "RESIDE_SENM": "기타지역",
     "SUBSCRPT_RANK_CODE": 1,
+    "SUPLY_HSHLDCO": 36
+  },
+  {
+    "CMPET_RATE": "(△2)",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "084.0948 ",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "13",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "SUBSCRPT_RANK_CODE": 2,
+    "SUPLY_HSHLDCO": 36
+  },
+  {
+    "CMPET_RATE": "1.50",
+    "HOUSE_MANAGE_NO": "2026000424",
+    "HOUSE_TY": "084.0948 ",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000424",
+    "REQ_CNT": "3",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "SUBSCRPT_RANK_CODE": 2,
     "SUPLY_HSHLDCO": 36
   },
   {

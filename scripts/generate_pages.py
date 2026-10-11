@@ -284,6 +284,41 @@ def filter_residual(res_list):
 
 # ── Jinja2 ────────────────────────────────────────
 
+# ── 우아아파트(wooaapt) 실거래 페이지 교차 링크 ──────────────────
+APTQ_BASE = "https://wooaapt.wooahouse.com"
+try:
+    _aq = json.loads((Path(__file__).parent / "aptq_regions.json").read_text(encoding="utf-8"))
+    APTQ_SG, APTQ_HUB = set(_aq["sigungu"]), set(_aq["hubs"])
+except (OSError, ValueError, KeyError):
+    APTQ_SG, APTQ_HUB = set(), set()
+
+
+def aptq_links(addr, region):
+    """청약 단지 주소 → 우아아파트의 동 허브/시군구/시도 URL(실제로 있는 것만). 반환 {url, label, sg_url, sido_url}"""
+    from urllib.parse import quote
+    toks = (addr or "").replace(",", " ").split()
+    do = region if region and region != "기타" else ""
+    res = {"sido_url": f"{APTQ_BASE}/region/{quote(do)}/" if do else "", "shingoga_url": f"{APTQ_BASE}/shingoga/{quote(do)}/" if do else f"{APTQ_BASE}/shingoga/", "url": "", "sg_url": "", "label": ""}
+    if len(toks) < 2 or not do:
+        return res
+    sg = toks[1]
+    rest = toks[2:]
+    if sg.endswith("시") and rest and rest[0].endswith("구"):
+        sg = sg[:-1] + rest[0]
+        rest = rest[1:]
+    if f"{do}|{sg}" not in APTQ_SG:
+        return res
+    res["sg_url"] = f"{APTQ_BASE}/region/{quote(do)}/{quote(sg)}/"
+    res["label"] = f"{do} {sg}"
+    for t in rest[:3]:
+        t = t.strip("()")
+        if t.endswith(("동", "읍", "면", "가")) and f"{do}|{sg}|{t}" in APTQ_HUB:
+            res["url"] = f"{APTQ_BASE}/region/{quote(do)}/{quote(sg)}/{quote(t)}/"
+            res["label"] = f"{do} {sg} {t}"
+            break
+    return res
+
+
 env = Environment(loader=FileSystemLoader(str(TMPL_DIR)), autoescape=True)
 env.globals.update({
     "kakao_key": KAKAO_KEY,
@@ -296,6 +331,7 @@ env.filters.update({
     "fmt_ym":           fmt_ym,
     "fmt_price":        fmt_price,
     "region_of":        region_of,
+    "aptq_links":       aptq_links,
     "house_type_name":  house_type_name,
 })
 

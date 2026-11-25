@@ -1,5 +1,93 @@
 [
   {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "062.2537 ",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "-"
+  },
+  {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "062.2537 ",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "01",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "-"
+  },
+  {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "084.9417A",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "-"
+  },
+  {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "084.9417A",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "02",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "-"
+  },
+  {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "084.8838B",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "-"
+  },
+  {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "084.8838B",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "03",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "-"
+  },
+  {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "084.9417C",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "01",
+    "RESIDE_SENM": "해당지역",
+    "TOP_SCORE": "-"
+  },
+  {
+    "AVRG_SCORE": "-",
+    "HOUSE_MANAGE_NO": "2026000554",
+    "HOUSE_TY": "084.9417C",
+    "LWET_SCORE": "-",
+    "MODEL_NO": "04",
+    "PBLANC_NO": "2026000554",
+    "RESIDE_SECD": "02",
+    "RESIDE_SENM": "기타지역",
+    "TOP_SCORE": "-"
+  },
+  {
     "AVRG_SCORE": "42.83",
     "HOUSE_MANAGE_NO": "2026000539",
     "HOUSE_TY": "059.9960A",
